@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 app.secret_key=os.urandom(24)
 
-mydb = mysql.connector.connect(host="3.7.45.121",
+mydb = mysql.connector.connect(host="3.7.45.161",
                                user="root",
                                password="newpass",
                                database="user_login")
