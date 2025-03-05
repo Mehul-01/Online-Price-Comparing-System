@@ -6,11 +6,13 @@ import os
 app = Flask(__name__)
 app.secret_key=os.urandom(24)
 
-mydb = mysql.connector.connect(host="127.0.0.1",
-                               user="root",
-                               password="newpass",
-                               database="user_login",
-                               port='3306')
+mydb = mysql.connector.connect(
+    host="127.0.0.1",
+    user="root",
+    password="newpass",
+    database="user_login",
+    port=3306  
+)
 cursor = mydb.cursor()
 
 @app.route('/')
